@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based Dashboards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loginSection">
+        <h1>Login</h1>
+        <div class="login-box" id="adminLogin">
+            <h2>Admin Login</h2>
+            <input type="text" id="adminUsername" placeholder="Enter Admin Username" />
+            <input type="password" id="adminPassword" placeholder="Enter Admin Password" />
+            <button onclick="login('admin')">Login</button>
+        </div>
+        <div class="login-box" id="salesManagerLogin">
+            <h2>Sales Manager Login</h2>
+            <input type="text" id="salesManagerUsername" placeholder="Enter Sales Manager Username" />
+            <input type="password" id="salesManagerPassword" placeholder="Enter Sales Manager Password" />
+            <button onclick="login('salesManager')">Login</button>
+        </div>
+        <div class="login-box" id="labourLogin">
+            <h2>Labour Login</h2>
+            <input type="text" id="labourUsername" placeholder="Enter Labour Username" />
+            <input type="password" id="labourPassword" placeholder="Enter Labour Password" />
+            <button onclick="login('labour')">Login</button>
+        </div>
+        <div class="login-box" id="hrLogin">
+            <h2>HR Login</h2>
+            <input type="text" id="hrUsername" placeholder="Enter HR Username" />
+            <input type="password" id="hrPassword" placeholder="Enter HR Password" />
+            <button onclick="login('hr')">Login</button>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard" style="display: none;">
+        <h2>Admin Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+        <div class="dashboard-card">
+            <h3>Manage Sales Managers</h3>
+            <!-- Add Sales Manager CRUD Operations Here -->
+        </div>
+        <div class="dashboard-card">
+            <h3>Manage Labours</h3>
+            <!-- Add Labour CRUD Operations Here -->
+        </div>
+        <div class="dashboard-card">
+            <h3>View Locations</h3>
+            <!-- Add Location Tracking Here -->
+        </div>
+    </div>
+
+    <!-- Sales Manager Dashboard -->
+    <div id="salesManagerDashboard" class="dashboard" style="display: none;">
+        <h2>Sales Manager Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+        <div class="dashboard-card">
+            <h3>Manage Labours</h3>
+            <!-- Add Labour CRUD Operations Here -->
+        </div>
+        <div class="dashboard-card">
+            <h3>Track In-Time and Out-Time</h3>
+            <!-- Add Time Tracking Operations Here -->
+        </div>
+    </div>
+
+    <!-- Labour Dashboard -->
+    <div id="labourDashboard" class="dashboard" style="display: none;">
+        <h2>Labour Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+        <div class="dashboard-card">
+            <h3>My Tasks</h3>
+            <!-- Display Labour Tasks Here -->
+        </div>
+    </div>
+
+    <!-- HR Dashboard -->
+    <div id="hrDashboard" class="dashboard" style="display: none;">
+        <h2>HR Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+        <div class="dashboard-card">
+            <h3>Attendance</h3>
+            <!-- Manage Attendance Here -->
+        </div>
+        <div class="dashboard-card">
+            <h3>Salaries</h3>
+            <!-- Manage Salaries Here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
